@@ -51,14 +51,13 @@ void loginUser() {
     char username[MAX_USERNAME_LENGTH];
     char password[MAX_PASSWORD_LENGTH];
 
-    printf("Enter username: ");
+    printf("Enter your username: ");
     scanf("%s", username);
 
-    printf("Enter password: ");
+    printf("Enter your password: ");
     scanf("%s", password);
 
-    int i;
-    for (i = 0; i < numUsers; i++) {
+    for (int i = 0; i < numUsers; i++) {
         if (strcmp(username, users[i].username) == 0 && strcmp(password, users[i].password) == 0) {
             if (users[i].active.flagInt) {
                 printf("Login successful.\n");
